@@ -88,7 +88,7 @@ ORDER BY ProductID ASC;
 Ex47:
 SELECT OrderID AS 'NUMERO DA ORDEM',ProductID AS 'ID DO PRODUTO',
 OrderDetailID AS 'NUMERO DETALHADO DA ORDEM ' FROM OrderDetails
-WHERE OrderDetailId %2=0 AND ProductID LIKE "%0"
+WHERE OrderDetailId %2=0 AND ProductID LIKE '%0'
 ORDER BY OrderID ASC;
 
 Ex48:
