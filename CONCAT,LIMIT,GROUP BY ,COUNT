@@ -1,0 +1,48 @@
+Ex1:
+SELECT productid AS 'ID do Produto',
+productname AS 'Nome do Produto',
+SupplierId AS 'Id do Suprimento' ,
+CategoryID AS 'Identificacao de Categoria',
+Unit AS 'Unidades',
+Price  AS 'Preco',
+CONCAT (Productname,' ',Price *2) AS 'Produto com dobro do preco'
+FROM Products
+ORDER BY productid ASC
+LIMIT 10;
+
+Ex2:
+SELECT productid AS 'ID do Produto',
+productname AS 'Nome do Produto',
+SupplierId AS 'Id do Suprimento' ,
+CategoryID AS 'Identificacao de Categoria',
+Unit AS 'Unidades',
+Price  AS 'Preco',
+CONCAT ('O produto ',productname,' custa ',price,' euros') AS 'Custo do produto'
+FROM Products
+WHERE price >0
+ORDER BY Price ASC
+LIMIT 5;
+
+Ex3:
+SELECT orderdetailid AS 'Detalhe da identificacao do pedido',
+orderid AS 'Identificacao do pedido',
+productid AS 'Identificacao do Produto',
+quantity AS 'Quantidade',
+CONCAT('Quantidade em estoque ',quantity,' valor do estoque ',Quantity * 10.5) AS 'Quantidade e valor total da mercadoria'
+FROM OrderDetails
+WHERE quantity > 0
+ORDER BY orderdetailid ASC
+LIMIT 15;
+
+Ex4:
+SELECT CONCAT('Funcionario SENAI ',firstname,' ',Lastname) AS 'Funcionarios SENAI'
+FROM Employees
+ORDER BY firstname ASC
+LIMIT 3;
+
+Ex5:
+SELECT CONCAT ('Preco original do produto ',Price,' preco do produto com 15% de desconto ',price - price * 0.15 
+) AS 'Produtos com desconto'
+FROM Products
+ORDER BY price DESC
+LIMIT 8;
