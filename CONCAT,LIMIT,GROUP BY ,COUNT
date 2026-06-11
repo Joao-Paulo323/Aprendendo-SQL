@@ -41,7 +41,8 @@ ORDER BY firstname ASC
 LIMIT 3;
 
 Ex5:
-SELECT CONCAT ('Preco original do produto ',Price,' preco do produto com 15% de desconto ',price - price * 0.15 
+SELECT CONCAT ('Preco original do produto ',
+Price,' preco do produto com 15% de desconto ',FORMAT (price - price * 0.15,2, 'pt_BR') 
 ) AS 'Produtos com desconto'
 FROM Products
 ORDER BY price DESC
