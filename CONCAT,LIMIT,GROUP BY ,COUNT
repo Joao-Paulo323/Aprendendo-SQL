@@ -47,3 +47,51 @@ Price,' preco do produto com 15% de desconto ',FORMAT (price - price * 0.15,2, '
 FROM Products
 ORDER BY price DESC
 LIMIT 8;
+
+Ex6:
+SELECT CONCAT('Nome do cliente ',customername,' cidade do cliente ',city) AS 'Localizacao do cliente'
+FROM Customers
+WHERE city LIKE '%a%'
+ORDER BY city ASC
+LIMIT 12;   
+
+Ex7:
+SELECT CONCAT('Quantidade real ', quantity, ' quantidade ideal 100 diferenca entre quantidade real e ideal ',100 - quantity) AS 'Tabela de estoque ideal'
+FROM OrderDetails
+WHERE quantity > 1
+ORDER BY quantity ASC
+LIMIT 20;
+
+Ex8:
+SELECT CONCAT(categoryname,' - ',description) AS 'Nome e descricao da categoria '
+FROM Categories
+WHERE categoryid > 1
+ORDER BY categoryname ASC
+LIMIT 5;
+
+Ex9:
+SELECT
+    SupplierName AS 'Nome do suprimento',
+    ProductName AS 'NOME DO PRODUTO',
+    Price * 50 AS 'Custo de 50 Unidades'
+FROM Suppliers
+JOIN Products
+ON Suppliers.SupplierID = Products.SupplierID
+LIMIT 10;
+
+Ex10:
+SELECT CONCAT('ENDERECO - ',address,'	CODIGO POSTAL - ',postalcode,' CIDADE - ',city) AS 'MORADA COMPLETA'
+FROM Customers
+WHERE city != '%z'
+ORDER BY city ASC
+LIMIT 25;
+
+Ex26:
+SELECT city AS 'CIDADE',
+COUNT(*) AS 'Total de clientes'
+FROM Customers
+GROUP BY city
+HAVING COUNT(*) > 3
+ORDER BY city ASC
+
+Ex27:
