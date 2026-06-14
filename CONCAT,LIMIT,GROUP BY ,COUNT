@@ -127,7 +127,7 @@ GROUP BY YEAR(BirthDate)
 HAVING COUNT(*) > 1;
 
 Ex30:
-SELECT c.Country,
+SELECT c.Country AS PAIS,
        COUNT(DISTINCT s.ShipperID) AS 'Quantidade Transportadoras'
 FROM Customers c
 JOIN Orders o
