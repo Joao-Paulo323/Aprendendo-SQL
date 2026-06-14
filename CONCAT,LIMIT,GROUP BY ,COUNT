@@ -95,3 +95,44 @@ HAVING COUNT(*) > 3
 ORDER BY city ASC
 
 Ex27:
+SELECT s.suppliername AS 'NOME DO FORNECEDOR',
+	COUNT(*) AS 'Quantidade de Produtos'
+FROM Suppliers s
+JOIN Products p 
+ON s.supplierid = p.supplierid
+GROUP BY s.supplierID, s.suppliername
+HAVING COUNT(*) < 5;
+
+Ex28:
+SELECT CategoryID,
+       COUNT(*) AS QuantidadeProdutos
+FROM Products
+GROUP BY CategoryID
+HAVING COUNT(*) IN (
+    SELECT Quantidade
+    FROM (
+        SELECT COUNT(*) AS Quantidade
+        FROM Products
+        GROUP BY CategoryID
+    ) AS ContagemCategorias
+    GROUP BY Quantidade
+    HAVING COUNT(*) > 1
+);
+
+EX29:
+SELECT YEAR(BirthDate) AS 'Ano de Nascimento',
+		COUNT(*) AS 'Quantidade de pessoas que fazem aniversario no mesmo ano'
+FROM Employees
+GROUP BY YEAR(BirthDate)
+HAVING COUNT(*) > 1;
+
+Ex30:
+SELECT c.Country,
+       COUNT(DISTINCT s.ShipperID) AS QuantidadeTransportadoras
+FROM Customers c
+JOIN Orders o
+    ON c.CustomerID = o.CustomerID
+JOIN Shippers s
+    ON o.ShipperID = s.ShipperID
+GROUP BY c.Country
+HAVING COUNT(DISTINCT s.ShipperID) > 1;
