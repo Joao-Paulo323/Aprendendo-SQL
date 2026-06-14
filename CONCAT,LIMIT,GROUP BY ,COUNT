@@ -128,7 +128,7 @@ HAVING COUNT(*) > 1;
 
 Ex30:
 SELECT c.Country,
-       COUNT(DISTINCT s.ShipperID) AS QuantidadeTransportadoras
+       COUNT(DISTINCT s.ShipperID) AS 'Quantidade Transportadoras'
 FROM Customers c
 JOIN Orders o
     ON c.CustomerID = o.CustomerID
