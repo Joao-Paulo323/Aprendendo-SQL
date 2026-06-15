@@ -34,8 +34,7 @@ CREATE TABLE Shippers (
 );
 
 CREATE TABLE Suppliers (
-    SupplierID   INT          PRIMARY KEY AUTO_INCREMENT,
-    -- CORRIGIDO: VARCHAR(20) era curto demais para nomes como "New Orleans Cajun Delights"
+    SupplierID   INT  PRIMARY KEY AUTO_INCREMENT,
     SupplierName VARCHAR(50),
     ContactName  VARCHAR(50),
     Address      VARCHAR(50),
