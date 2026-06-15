@@ -3,7 +3,7 @@ CREATE DATABASE SISDBM26;
 USE sisdbm26;
 
 CREATE TABLE Customers( 
-    CustomerID   INT          PRIMARY KEY AUTO_INCREMENT, 
+    CustomerID   INT  PRIMARY KEY AUTO_INCREMENT, 
     CustomerName VARCHAR(50),
     ContactName  VARCHAR(50), 
     Address      VARCHAR(100),
@@ -13,7 +13,7 @@ CREATE TABLE Customers(
 );
 
 CREATE TABLE Employees (
-    EmployeeID INT         PRIMARY KEY AUTO_INCREMENT,
+    EmployeeID INT  PRIMARY KEY AUTO_INCREMENT,
     LastName   VARCHAR(30),
     FirstName  VARCHAR(30),
     BirthDate  DATE,
@@ -22,19 +22,19 @@ CREATE TABLE Employees (
 );
 
 CREATE TABLE Categories (
-    CategoryID   INT          PRIMARY KEY AUTO_INCREMENT,
+    CategoryID   INT PRIMARY KEY AUTO_INCREMENT,
     CategoryName VARCHAR(50),
     Description  VARCHAR(250)
 );
 
 CREATE TABLE Shippers (
-    ShipperID   INT         PRIMARY KEY AUTO_INCREMENT,
+    ShipperID   INT PRIMARY KEY AUTO_INCREMENT,
     ShipperName VARCHAR(50),
     Phone       VARCHAR(15)
 );
 
 CREATE TABLE Suppliers (
-    SupplierID   INT  PRIMARY KEY AUTO_INCREMENT,
+    SupplierID   INT PRIMARY KEY AUTO_INCREMENT,
     SupplierName VARCHAR(50),
     ContactName  VARCHAR(50),
     Address      VARCHAR(50),
@@ -45,7 +45,7 @@ CREATE TABLE Suppliers (
 );
 
 CREATE TABLE Products (
-    ProductID   INT            PRIMARY KEY AUTO_INCREMENT,
+    ProductID   INT PRIMARY KEY AUTO_INCREMENT,
     ProductName VARCHAR(150),
     -- CORRIGIDO: DECIMAL sem precisão vira DECIMAL(10,0) — adicionada precisão correta
     Price       DECIMAL(10,2),
@@ -77,9 +77,9 @@ CREATE TABLE OrderDetails (
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
 
--- ============================================================
--- DADOS
--- ============================================================
+ ====================================================
+                      DADOS
+====================================================
 
 INSERT INTO Categories VALUES(1,'Beverages','Soft drinks, coffees, teas, beers, and ales');
 INSERT INTO Categories VALUES(2,'Condiments','Sweet and savory sauces, relishes, spreads, and seasonings');
