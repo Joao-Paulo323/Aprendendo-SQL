@@ -156,3 +156,93 @@ SELECT  OrderID AS 'ID do Pedido',OrderDetailID AS 'ID de Detalhe do Pedido'
 FROM orderdetails
 WHERE   OrderDetailID IN (20,40,60,80)
 ORDER BY OrderID ASC;
+
+Ex:26
+SELECT  ProductID AS 'ID do Produto',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   ProductID IN (5,10,20)
+ORDER BY Quantity ASC;
+
+EX:27
+SELECT  OrderDetailID AS 'ID de Detalhe do Pedido',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   Quantity IN (8,16,24,32)
+ORDER BY OrderDetailID ASC;
+
+EX:28
+SELECT  OrderID AS 'ID do Pedido',ProductID AS 'ID do Produto'
+FROM orderdetails
+WHERE   OrderID IN (300,400,500)
+ORDER BY OrderDetailID ASC;
+
+EX:29
+SELECT  OrderID AS 'ID do Pedido',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   Quantity IN (15,30,45)
+ORDER BY OrderID ASC;
+
+Ex:30
+SELECT  OrderDetailID AS 'ID de Detalhe do Pedido',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   OrderDetailID IN (50,150,250)
+ORDER BY Quantity ASC;
+
+EX:31
+SELECT  OrderDetailID AS 'ID de Detalhe do Pedido',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   OrderDetailID IN (100,200,300,400)
+ORDER BY Quantity ASC;
+
+EX:32
+SELECT  ProductID AS 'ID do Produto',OrderID AS 'ID do Pedido'
+FROM orderdetails
+WHERE   ProductID IN (10,20,30,40)
+ORDER BY OrderID ASC;
+
+EX:33
+SELECT  ProductID AS 'ID do Produto',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   Quantity IN (5,10,15,20)
+ORDER BY ProductID ASC;
+
+EX:34
+SELECT  Quantity AS 'Quantidade',OrderID AS 'ID do Pedido'
+FROM orderdetails
+WHERE   OrderID IN (50,150,200,250)
+ORDER BY Quantity ASC;
+
+EX:35
+SELECT  OrderDetailID AS 'ID de Detalhe do Pedido',OrderID AS 'ID do Pedido'
+FROM orderdetails
+WHERE   OrderDetailID IN (1,3,5,7)
+ORDER BY OrderID ASC;
+
+EX:36
+SELECT  ProductID AS 'ID do Produto',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   ProductID IN (13,26,39)
+ORDER BY Quantity ASC;
+
+EX:37
+SELECT  OrderDetailID AS 'ID de Detalhe do Pedido',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   Quantity IN (22,44,66,88)
+ORDER BY OrderDetailID ASC;
+
+EX:38
+SELECT  OrderID AS 'ID do Pedido',ProductID AS 'ID do Produto'
+FROM orderdetails
+WHERE   OrderID IN (90,180,270)
+ORDER BY ProductID ASC;
+
+EX:39
+SELECT  OrderID AS 'ID do Pedido',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   Quantity IN (8,16,24,32)
+ORDER BY OrderID ASC;
+
+EX:40
+SELECT  OrderDetailID AS 'ID de Detalhe do Pedido',Quantity AS 'Quantidade'
+FROM orderdetails
+WHERE   OrderDetailID IN (101,201,301,401)
+ORDER BY Quantity ASC;
