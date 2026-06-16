@@ -224,10 +224,6 @@ INSERT INTO Suppliers VALUES(27,'Escargots Nouveaux','Marie Delamare','22, rue H
 INSERT INTO Suppliers VALUES(28,'Gai pâturage','Eliane Noz','Bat. B 3, rue des Alpes','Annecy','74000','France','38.76.98.06');
 INSERT INTO Suppliers VALUES(29,'Forêts d''érables','Chantal Goulet','148 rue Chasseur','Ste-Hyacinthe','J2S 7S8','Canada','(514) 555-2955');
 
--- CORRIGIDO: ordem dos valores estava errada (CategoryID e SupplierID invertidos).
--- Ordem correta conforme CREATE TABLE: ProductID, ProductName, Price, Unit, CategoryID, SupplierID
--- Original (errado): ProductID, ProductName, CategoryID, SupplierID, Unit, Price
-
 INSERT INTO Products VALUES(1,'Chais',18,'10 boxes x 20 bags',1,1);
 INSERT INTO Products VALUES(2,'Chang',19,'24 - 12 oz bottles',1,1);
 INSERT INTO Products VALUES(3,'Aniseed Syrup',10,'12 - 550 ml bottles',2,1);
