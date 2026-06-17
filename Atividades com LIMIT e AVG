@@ -1,87 +1,87 @@
-EX1:
+-- EX1:
 SELECT categoryname AS 'Nome da Categoria'
 FROM categories
 ORDER BY categoryname ASC
 LIMIT 5;
 
-EX2:
+-- EX2:
 SELECT Quantity AS 'Quantidade' 
 FROM orderdetails
 WHERE Quantity > 10
 ORDER BY Quantity ASC
 LIMIT 3; 	
 
-EX3:
+-- EX3:
 SELECT Quantity AS 'Quantidade' 
 FROM orderdetails
 WHERE Quantity 
 ORDER BY Quantity DESC
 LIMIT 7; 
 
-EX4:
+-- EX4:
 SELECT ProductID AS 'ID do Produto' 
 FROM orderdetails
 WHERE ProductID = 4 
 ORDER BY Quantity DESC
 LIMIT 10; 	
 
-EX5:
+-- EX5:
 SELECT OrderID AS 'ID do Pedido' ,orderdetailid
 FROM orderdetails
 WHERE orderid 
 ORDER BY Orderdetailid ASC
 LIMIT 2; 	
 
-EX6:
+-- EX6:
 SELECT Quantity AS 'Quantidade' ,orderdetailid
 FROM orderdetails
 WHERE quantity 
 ORDER BY Quantity ASC
 LIMIT 15; 	
 
-EX7:
+-- EX7:
 SELECT Quantity AS 'Quantidade' ,ProductID AS 'ID do Produto'
 FROM orderdetails
 WHERE quantity 
 ORDER BY ProductID ASC
 LIMIT 20; 	
 
-EX8:
+-- EX8:
 SELECT Quantity AS 'Quantidade' ,OrderdetailID AS 'ID de Detalhe do Produto'
 FROM orderdetails
 WHERE quantity 
 ORDER BY OrderdetailID ASC
 LIMIT 8; 	
 
-EX9:
+-- EX9:
 SELECT Quantity AS 'Quantidade' ,OrderID AS 'ID Pedido'
 FROM orderdetails
 WHERE ProductID > 3 
 ORDER BY OrderID ASC
 LIMIT 5; 	
 
-EX10:
+-- EX10:
 SELECT Quantity AS 'Quantidade' ,OrderID AS 'ID Pedido'
 FROM orderdetails
 WHERE OrderID
 ORDER BY Quantity DESC
 LIMIT 10; 	
 
-EX11:
+-- EX11:
 SELECT Quantity AS 'Quantidade' ,OrderDetailID AS 'ID de detalhe do Pedido'
 FROM orderdetails
 WHERE Quantity < 15
 ORDER BY OrderDetailID DESC
 LIMIT 12; 	
 
-EX12:
+-- EX12:
 SELECT Quantity AS 'Quantidade' ,ProductID AS 'ID do Produto'
 FROM orderdetails
 WHERE ProductID % 2 = 0
 ORDER BY Quantity ASC
 LIMIT 12; 	
 
-EX13:
+-- EX13:
 SELECT ProductID AS 'ID do Produto'
 FROM orderdetails
 WHERE ProductID 
