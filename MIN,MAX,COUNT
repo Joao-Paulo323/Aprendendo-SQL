@@ -139,7 +139,7 @@ ORDER BY Quantity;
 
 /* EXERCICIO 28 */
 SELECT Quantity AS QUANTIDADE,
-       MIN(ProductID) AS 'ID dos produtos',
+       MIN(ProductID) AS 'ID dos produtos'
 FROM OrderDetails
 WHERE Quantity BETWEEN 5 AND 15
 GROUP BY Quantity
