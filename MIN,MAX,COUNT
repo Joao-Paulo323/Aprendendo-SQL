@@ -1,0 +1,122 @@
+-- EX1:
+SELECT MIN(Quantity) AS 'Menor Quantidade'
+FROM OrderDetails;
+
+-- EX2:
+SELECT MAX(Quantity) AS 'Maior Quantidade'
+FROM OrderDetails;
+
+-- EX3:
+SELECT MIN(OrderID) AS 'Menor ID da Ordem'
+FROM OrderDetails;
+
+-- EX4:
+SELECT MAX(OrderID) AS 'Maior ID da Ordem'
+FROM OrderDetails
+WHERE Quantity > 5;
+
+-- EX5:
+SELECT MIN(Quantity) AS 'Menor Quantidade'
+FROM OrderDetails
+WHERE ProductID = 3;
+
+-- EX6:
+SELECT MAX(OrderDetailID) AS 'Maior ID Detalhado'
+FROM OrderDetails
+WHERE Quantity < 10;
+
+-- EX7:
+SELECT MIN(ProductID) AS 'Menor ID do Produto'
+FROM OrderDetails;
+
+-- EX8:
+SELECT MAX(Quantity) AS 'Maior Quantidade'
+FROM OrderDetails
+ORDER BY ProductID ASC;
+
+-- EX9:
+SELECT MIN(OrderID) AS 'Menor ID da Ordem'
+FROM OrderDetails
+ORDER BY Quantity DESC;
+
+-- EX10:
+SELECT MAX(Quantity) AS 'Maior Quantidade'
+FROM OrderDetails
+WHERE ProductID <> 2;
+
+-- EX11:
+SELECT MIN(OrderDetailID) AS 'Menor ID Detalhado'
+FROM OrderDetails
+ORDER BY OrderID ASC;
+
+-- EX12:
+SELECT MIN(Quantity) AS 'Menor Quantidade'
+FROM OrderDetails
+WHERE OrderID > 50;
+
+-- EX13:
+SELECT MAX(Quantity) AS 'Maior Quantidade'
+FROM OrderDetails
+WHERE ProductID = 4
+ORDER BY OrderDetailID ASC;
+
+-- EX14:
+SELECT MIN(OrderDetailID) AS 'Menor ID Detalhado'
+FROM OrderDetails
+WHERE Quantity > 15;
+
+-- EX15:
+SELECT MAX(Quantity) AS 'Maior Quantidade'
+FROM OrderDetails
+WHERE ProductID BETWEEN 5 AND 10;
+
+-- EX16:
+SELECT MIN(OrderID) AS 'Menor ID da Ordem'
+FROM OrderDetails
+WHERE Quantity % 5 = 0;
+
+-- EX17:
+SELECT MAX(OrderDetailID) AS 'Maior ID Detalhado'
+FROM OrderDetails
+ORDER BY Quantity ASC;
+
+-- EX18:
+SELECT MIN(Quantity) AS 'Menor Quantidade'
+FROM OrderDetails
+WHERE OrderID < 30;
+
+-- EX19:
+SELECT MAX(Quantity) AS 'Maior Quantidade'
+FROM OrderDetails
+ORDER BY ProductID DESC;
+
+-- EX20:
+SELECT MIN(ProductID) AS 'Menor ID do Produto'
+FROM OrderDetails
+WHERE Quantity > 20;
+
+-- EX21:
+SELECT MAX(Quantity) AS 'Maior Quantidade'
+FROM OrderDetails
+WHERE ProductID = 6
+ORDER BY OrderID ASC;
+
+-- EX22:
+SELECT MIN(OrderID) AS 'Menor ID da Ordem'
+FROM OrderDetails
+ORDER BY OrderDetailID ASC;
+
+-- EX23:
+SELECT MAX(OrderDetailID) AS 'Maior ID Detalhado'
+FROM OrderDetails
+WHERE ProductID > 10;
+
+-- EX24:
+SELECT MIN(Quantity) AS 'Menor Quantidade'
+FROM OrderDetails
+ORDER BY OrderID ASC;
+
+-- EX25:
+SELECT MAX(OrderID) AS 'Maior ID da Ordem'
+FROM OrderDetails
+WHERE Quantity < 10;
