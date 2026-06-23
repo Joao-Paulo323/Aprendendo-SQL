@@ -1,0 +1,70 @@
+-- EX1:
+SELECT p.productName AS 'NOME DO PRODUTO', 
+s.SupplierName AS 'Nome do PROVEDOR', 
+s.Country AS 'PAIS DO PROVEDOR',
+p.SupplierID AS 'ID Do Provedor'
+FROM products AS p
+INNER JOIN Suppliers AS s ON 
+p.supplierid = s.supplierid
+WHERE categoryid = 2
+ORDER BY 'ID do Provedor';
+
+-- EX2:
+SELECT o.orderID AS 'ID do Pedido', o.orderDate AS 'Data do Pedido',s.shipperName AS 'Nome da Transportadora'
+FROM orders AS o
+INNER JOIN Shippers AS s ON
+o.shipperID = s.shipperID;
+
+-- EX3:
+SELECT p.productName AS 'Nome do Produto', s.city AS 'Cidade Do fornecedor',p.price AS 'Preco do Produto',s.supplierID AS 'Id do Provedor'
+FROM Products AS p
+INNER JOIN suppliers AS s ON
+p.supplierID = s.supplierID
+WHERE price > 50;
+
+-- EX4:
+SELECT o.orderid AS 'ID do pedido',s.shippername AS 'Nome da Transportadora',s.shipperID AS 'ID da transportadora'
+FROM Orders AS o
+INNER JOIN Shippers AS s ON
+s.shipperID = o.shipperid
+WHERE shipperName = 'Speedy Express';
+
+-- EX5:
+SELECT p.ProductName AS 'Nome do Produto',
+s.supplierName AS 'Nome do Fornecedor',
+s.country AS 'Pais do fornecedor',
+s.supplierID AS 'Id do Fornecedor'
+FROM products AS p
+INNER JOIN Suppliers AS s 
+ON p.supplierID = s.supplierID
+WHERE country = 'USA' OR 'BRAZIL'
+
+-- EX6:
+SELECT o.orderid AS 'ID do Pedido',
+s.phone 'Telefone da transportadora',
+s.shipperid AS 'ID da transportadora'
+FROM orders AS o
+INNER JOIN shippers AS s
+ON s.shipperid = o.shipperid
+WHERE YEAR(OrderDate) = 2023;
+
+-- EX7:
+SELECT s.supplierName AS 'Nome do Fornecedor',
+p.productName AS 'Nome do produto',
+s.supplierid AS 'ID do provedor ',
+p.price AS 'Preco do produto' 
+FROM suppliers AS s
+INNER JOIN products AS p
+ON s.supplierid = p.supplierid;
+
+-- EX8:
+SELECT o.orderid AS 'ID do pedido',
+s.shippername AS 'Nome da transportadora',
+s.shipperid AS 'ID da transportadora'
+FROM orders AS o
+INNER JOIN Shippers AS s ON
+o.shipperID = s.ShipperID
+ORDER BY 'Nome da transpotadora' ASC
+
+PART 2:
+
