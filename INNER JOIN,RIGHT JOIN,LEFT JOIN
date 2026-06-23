@@ -37,7 +37,7 @@ s.supplierID AS 'Id do Fornecedor'
 FROM products AS p
 INNER JOIN Suppliers AS s 
 ON p.supplierID = s.supplierID
-WHERE country = 'USA' OR 'BRAZIL'
+WHERE country = 'USA' OR 'BRAZIL';
 
 -- EX6:
 SELECT o.orderid AS 'ID do Pedido',
@@ -64,7 +64,23 @@ s.shipperid AS 'ID da transportadora'
 FROM orders AS o
 INNER JOIN Shippers AS s ON
 o.shipperID = s.ShipperID
-ORDER BY 'Nome da transpotadora' ASC
+ORDER BY 'Nome da transpotadora' ASC;
 
 PART 2:
 
+-- EX9:
+SELECT s.supplierName AS 'Nome do Fornecedor'
+,p.productname AS 'Nome do Produto',
+s.supplierid AS 'ID do Fornecedor'
+FROM suppliers AS s
+LEFT JOIN Products AS p 
+ON s.supplierid = p.supplierid;
+
+-- EX10:
+SELECT s.shipperName AS 'Nome da Transportadora',
+s.ShipperID AS 'ID da Transpotadora',
+COUNT(o.orderid) AS 'Quantidade de Pedidos'
+FROM Shippers AS s
+LEFT JOIN Orders AS o 
+ON s.shipperid = o.shipperid
+GROUP BY s.ShipperID,s.shippername;
