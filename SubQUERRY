@@ -1,0 +1,11 @@
+-- EX26:
+SELECT CustomerID AS 'ID do Cliente',
+COUNT(Orderid) AS 'Total de pedidos'
+FROM orders
+GROUP BY CustomerID
+HAVING COUNT(Orderid) > 
+(SELECT COUNT(OrderID) 
+FROM Orders 
+WHERE CustomerID = 1)
+LIMIT 5;
+
